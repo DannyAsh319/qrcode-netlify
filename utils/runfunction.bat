@@ -1,0 +1,1 @@
+curl https://keen-kirch-4266db.netlify.app/.netlify/functions/hello
