@@ -3,7 +3,7 @@ exports.handler = async (event) => {
   const subject = event.queryStringParameters.name || "World";
   return {
     statusCode: 200,
-    body: [
+    body: JSON.stringify([
       {
         name: "meatballs",
         date: "2020-04-01T23:28:56.782Z",
@@ -16,6 +16,6 @@ exports.handler = async (event) => {
         photo:
           "https://static01.nyt.com/images/2014/02/12/dining/12JPCHILI2/12JPCHILI2-articleLarge-v3.jpg",
       },
-    ],
+    ]),
   };
 };
