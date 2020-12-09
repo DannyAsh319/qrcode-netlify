@@ -3,7 +3,7 @@
   <head>
     <title>Startup</title>
 
-    https://keen-kirch-4266db.netlify.app/.netlify/functions/hello
+    <!-- https://keen-kirch-4266db.netlify.app/.netlify/functions/hello
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
@@ -12,9 +12,19 @@
     
     <!-- Your own stylesheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <script>
+      $(document).ready(function() {
+
+        $("button").click(function() {
+          $.get("https://keen-kirch-4266db.netlify.app/.netlify/functions/hello", function(data, status) {
+            $("#test").html(data);
+            console.log(data);
+          })
+        })
+      })
+    </script>
 
     <div class="container d-flex align-items-center h-100">
       <div class="row">
@@ -24,8 +34,8 @@
         <div class="buffer col-12"></div>
         <section class="text-center col-12">
         <hr>
-        <a href="codes.html">
         <button class="btn btn-primary btn-xl">GET CODES!</button>
+        <p id="test"></p>
         </a>
         </section>
       </div>
